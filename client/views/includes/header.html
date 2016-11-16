@@ -11,13 +11,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">We Work Meteor</a>
+                    <a class="navbar-brand" href="/">東大英会話</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="{{isActiveRoute regex='^jobs$'}}"><a href="{{pathFor 'jobs'}}">Jobs</a></li>
-                        <li class="{{isActiveRoute regex='profiles'}}"><a href="{{pathFor 'profiles'}}">Developers</a></li>
+                        <!-- <li class="{{isActiveRoute regex='^jobs$'}}"><a href="{{pathFor 'jobs'}}">Jobs</a></li>-->
+                        <li class="{{isActiveRoute regex='profiles'}}"><a href="{{pathFor 'profiles'}}">先生を探す</a></li>
                         {{#if currentUser}}
                             <li class="{{isActiveRoute regex='jobNew'}}"><a href="{{pathFor 'jobNew'}}">Post a Job</a></li>
                             {{#unless currentUser.isDeveloper}}
@@ -31,8 +31,8 @@
                         {{#if currentUser}}
                         	{{>headerUserMenu}}
                         {{else}}
-                            <li class="{{isActiveRoute regex='signIn'}}"><a href="{{pathFor 'signIn'}}">Log In</a></li>
-                            <li class="{{isActiveRoute regex='signUp'}}"><a href="{{pathFor 'signUp'}}">Sign Up</a></li>
+                            <li class="{{isActiveRoute regex='signIn'}}"><a href="{{pathFor 'signIn'}}">ログイン</a></li>
+                            <li class="{{isActiveRoute regex='signUp'}}"><a href="{{pathFor 'signUp'}}">新規登録</a></li>
                         {{/if}}
                     </ul>
                 </div>
